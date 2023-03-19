@@ -5,8 +5,8 @@ class RemindersPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("ggdg"),
+    return Scaffold(
+      body: Container(),
     );
   }
 }

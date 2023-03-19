@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mo_app/core/color/signin_colors.dart';
 import 'package:mo_app/core/stringes/signin_stringes.dart';
-import 'package:mo_app/features/presentation/reminders/reminders.dart';
 import 'package:mo_app/features/presentation/signin_getstart/get_start/widgets/getstart_elevated_button.dart';
 import 'package:mo_app/features/presentation/signin_getstart/get_start/widgets/getstart_richtexet.dart';
 import 'package:mo_app/features/presentation/signin_getstart/get_start/widgets/getstart_text.dart';
@@ -40,7 +39,7 @@ class GetStartTab extends StatelessWidget {
               buttonText: GetStart.getStarted,
               textColor: SigninColors.signinWhite,
               onPressed: () {
-                Navigator.of(context).pushNamed("/RemindersPage");
+                Navigator.of(context).popAndPushNamed("/RemindersPage");
               },
             ),
             const SizedBox(

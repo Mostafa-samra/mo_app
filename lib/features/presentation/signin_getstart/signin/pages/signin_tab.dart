@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mo_app/core/color/signin_colors.dart';
 import 'package:mo_app/core/stringes/signin_stringes.dart';
-import 'package:mo_app/features/presentation/reminders/reminders.dart';
 import 'package:mo_app/features/presentation/signin_getstart/signin/widgets/signin_connect_text.dart';
 import 'package:mo_app/features/presentation/signin_getstart/signin/widgets/signin_elevated_button.dart';
 import 'package:mo_app/features/presentation/signin_getstart/signin/widgets/signin_face_googl.dart';
@@ -40,7 +39,7 @@ class SignInTab extends StatelessWidget {
               onPressed: () {
                 // Navigator.push(context,
                 //     MaterialPageRoute(builder: (_) => const RemindersPage()));
-                Navigator.of(context).pushNamed("/RemindersPage");
+                Navigator.pushNamed(context, "/RemindersPage");
               },
             ),
           ),
