@@ -23,10 +23,7 @@ class IntroPage extends StatelessWidget {
             bottom: 100,
             child: IntroElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (_) => const SigninPageAndGetStart()));
+                  Navigator.of(context).pushNamed("/SigninPageAndGetStart");
                 },
                 buttonColor: IntroColors.introWhite,
                 buttonText: IntroString.logIn,

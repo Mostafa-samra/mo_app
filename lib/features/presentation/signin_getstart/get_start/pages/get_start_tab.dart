@@ -40,8 +40,7 @@ class GetStartTab extends StatelessWidget {
               buttonText: GetStart.getStarted,
               textColor: SigninColors.signinWhite,
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const Reminders()));
+                Navigator.of(context).pushNamed("/RemindersPage");
               },
             ),
             const SizedBox(

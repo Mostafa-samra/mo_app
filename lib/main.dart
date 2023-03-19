@@ -1,19 +1,22 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:mo_app/features/presentation/intro/pages/intro_page.dart';
+import 'package:mo_app/features/presentation/routes.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Mo App',
-      home: IntroPage(),
+      initialRoute: "/",
+      onGenerateRoute: MyAppRoute.generateRoute,
     );
   }
 }

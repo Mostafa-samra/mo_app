@@ -38,8 +38,9 @@ class SignInTab extends StatelessWidget {
               buttonText: SigninStringes.login,
               textColor: SigninColors.signinWhite,
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const Reminders()));
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (_) => const RemindersPage()));
+                Navigator.of(context).pushNamed("/RemindersPage");
               },
             ),
           ),

@@ -1,0 +1,2137 @@
+{
+    "collection": {
+    "info": {
+    "_postman_id": "4952532f-f610-4389-9c69-3d60efaa038d",
+    "name": "Reminder",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "updatedAt": "2023-02-26T15:51:10.000Z"
+    },
+    "item": [
+    {
+    "name": "Auth",
+    "item": [
+    {
+    "name": "Register",
+    "id": "8e1b8cae-7c44-452c-bf4f-e8114bfb6dd5",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "lang",
+    "value": "ar",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "name",
+    "value": "Mahmoud Elmenofy",
+    "type": "text"
+    },
+    {
+    "key": "phone",
+    "value": "",
+    "type": "text"
+    },
+    {
+    "key": "password",
+    "value": "123123123",
+    "type": "text"
+    },
+    {
+    "key": "device_key",
+    "value": "ansfb7346327gd32rd7273",
+    "type": "text"
+    },
+    {
+    "key": "lang",
+    "value": "en",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/register",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "register"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Login",
+    "id": "59d66915-b6ce-49c3-9e41-cedc377781ad",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "phone",
+    "value": "01000000000",
+    "type": "text"
+    },
+    {
+    "key": "password",
+    "value": "123123123",
+    "type": "text"
+    },
+    {
+    "key": "device_key",
+    "value": "46dsfkvs2658237623615fhddd",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/login",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "login"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Social",
+    "id": "f2d38923-7e42-467f-a1ab-6b2e66dea170",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "lang",
+    "value": "ar",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "email",
+    "value": "email@e.com",
+    "type": "text"
+    },
+    {
+    "key": "device_key",
+    "value": "46dsfkvs2658237623615fhddd",
+    "type": "text"
+    },
+    {
+    "key": "login_type",
+    "value": "facebook",
+    "type": "text"
+    },
+    {
+    "key": "name",
+    "value": "email",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/auth/social",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "auth",
+    "social"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "User Details",
+    "id": "a90a4baa-a775-4bdd-b966-f8b7210cff71",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|CNNUgkejBBdiXDTmIZSZIsIkqJjSPOranxFxzY4q",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    },
+    {
+    "key": "lang",
+    "value": "ar",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": []
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/user_data",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "user_data"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Gogle",
+    "id": "f2b1e406-702c-41e4-94eb-bf88ab415aef",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/auth/google",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "auth",
+    "google"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Facbook",
+    "id": "5161561d-6331-4953-8dec-929a3f9a2a99",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/auth/facebook",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "auth",
+    "facebook"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "User Update",
+    "id": "760f6b5e-3519-4b71-8dcf-3e93a675ce3c",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|drnuy3dQYGzynled8DFYc2FsTK7gdiNSYUYW2GI3",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "name",
+    "value": "Mahmoud",
+    "type": "text"
+    },
+    {
+    "key": "phone",
+    "value": "01063641778",
+    "type": "text"
+    },
+    {
+    "key": "password",
+    "value": "12345678",
+    "type": "text"
+    },
+    {
+    "key": "lang",
+    "value": "en",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/update_user",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "update_user"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "LogOut",
+    "id": "0bd21736-5f0e-4dc2-bcc1-aa777f6f00f5",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|drnuy3dQYGzynled8DFYc2FsTK7gdiNSYUYW2GI3",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/logout",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "logout"
+    ],
+    "query": [
+    {
+    "key": "",
+    "value": null,
+    "type": "text",
+    "disabled": true
+    }
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Forget Pass",
+    "id": "754d8651-4158-42f7-90e1-ea3d6e3c813f",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "email",
+    "value": "test@test.com",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/forgot_password",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "forgot_password"
+    ]
+    }
+    },
+    "response": []
+    }
+    ],
+    "id": "f17be8c7-6f06-4bab-8681-6e661e9a9fa1"
+    },
+    {
+    "name": "Notes",
+    "item": [
+    {
+    "name": "Get Notes",
+    "id": "1acdb07c-1d0f-4c97-a8e6-4fc6554e578a",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|CNNUgkejBBdiXDTmIZSZIsIkqJjSPOranxFxzY4q",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    },
+    {
+    "key": "lang",
+    "value": "ar",
+    "type": "text"
+    }
+    ],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/note",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "note"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Post Note",
+    "id": "28daade8-73f4-4bd7-ad7b-f701118e9bea",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 1|cQiFwndU7cXRtYPgdl99DD9KruSXjLT9nZsS5D8f",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "title",
+    "value": "this is title",
+    "type": "text"
+    },
+    {
+    "key": "body",
+    "value": "this is body",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/note/store",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "note",
+    "store"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Show Note",
+    "id": "90fdc9b2-d75b-4c49-b4cb-82df6c9c07c5",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": []
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/note/show/1",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "note",
+    "show",
+    "1"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Update Note",
+    "id": "bfd59196-1ffd-4ccc-9bf0-391dbd246c80",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|drnuy3dQYGzynled8DFYc2FsTK7gdiNSYUYW2GI3",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "title",
+    "value": "this is edit title",
+    "type": "text"
+    },
+    {
+    "key": "body",
+    "value": "this is edite body",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/note/update/1",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "note",
+    "update",
+    "1"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Delete",
+    "id": "7fad4cda-517a-4ca6-b11c-7a58ae5a1157",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|drnuy3dQYGzynled8DFYc2FsTK7gdiNSYUYW2GI3",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "",
+    "value": "",
+    "type": "text",
+    "disabled": true
+    },
+    {
+    "key": "",
+    "value": "",
+    "type": "text",
+    "disabled": true
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/note/delete/1",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "note",
+    "delete",
+    "1"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Search",
+    "id": "4e1fa48c-ea95-48d1-86c8-74e4ff6d29b6",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "search",
+    "value": "this",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/note/search",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "note",
+    "search"
+    ]
+    }
+    },
+    "response": []
+    }
+    ],
+    "id": "a085fd41-9c3b-477a-95e1-3e19409b37f3"
+    },
+    {
+    "name": "Events",
+    "item": [
+    {
+    "name": "Get All Events",
+    "id": "7dff23aa-e3eb-4f5f-8f09-648691193e23",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/event/all_events",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "event",
+    "all_events"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Upcoming Events",
+    "id": "a4359945-589e-40e1-98d1-91bc88d23180",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/event/upcoming_events",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "event",
+    "upcoming_events"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Past Events",
+    "id": "bc24aeaf-3821-4137-80ad-e4a4aa978805",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/event/past_events",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "event",
+    "past_events"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Post Event",
+    "id": "c03c1398-0ec5-48be-8494-f51107bcb404",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "name",
+    "value": "this is event name",
+    "type": "text"
+    },
+    {
+    "key": "body",
+    "value": "this is event body",
+    "type": "text"
+    },
+    {
+    "key": "date",
+    "value": "2022/2/26",
+    "type": "text"
+    },
+    {
+    "key": "time",
+    "value": "15:15",
+    "type": "text"
+    },
+    {
+    "key": "is_pre_minder",
+    "value": "1",
+    "description": "0 => no, 1 => yes",
+    "type": "text"
+    },
+    {
+    "key": "pre_minder_time",
+    "value": "10",
+    "description": "minute => 3",
+    "type": "text"
+    },
+    {
+    "key": "is_repeat",
+    "value": "1",
+    "description": "0 => no, 1 => yes, just yearly",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/event/store",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "event",
+    "store"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Show Event",
+    "id": "a83ca363-af8c-4165-b79c-d28d09611405",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "name",
+    "value": "this is event edit name",
+    "type": "text"
+    },
+    {
+    "key": "body",
+    "value": "this is event edit body",
+    "type": "text"
+    },
+    {
+    "key": "date",
+    "value": "2023/1/11",
+    "type": "text"
+    },
+    {
+    "key": "time",
+    "value": "23:49",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/event/show/1",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "event",
+    "show",
+    "1"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Update Event",
+    "id": "237a8f75-a5b5-4dd2-834f-f41eb51f135e",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "name",
+    "value": "this is event name",
+    "type": "text"
+    },
+    {
+    "key": "body",
+    "value": "this is event body",
+    "type": "text"
+    },
+    {
+    "key": "date",
+    "value": "2023/2/26",
+    "type": "text"
+    },
+    {
+    "key": "time",
+    "value": "15:15",
+    "type": "text"
+    },
+    {
+    "key": "is_pre_minder",
+    "value": "1",
+    "type": "text",
+    "description": "day:hour:minuts (1:1:0)"
+    },
+    {
+    "key": "pre_minder_time",
+    "value": "10",
+    "type": "text"
+    },
+    {
+    "key": "is_repeat",
+    "value": "0",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/event/update/1",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "event",
+    "update",
+    "1"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Delete",
+    "id": "247b5677-9fe7-40a8-8b53-4aaf070b2cbd",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|drnuy3dQYGzynled8DFYc2FsTK7gdiNSYUYW2GI3",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "",
+    "value": "",
+    "type": "text",
+    "disabled": true
+    },
+    {
+    "key": "",
+    "value": "",
+    "type": "text",
+    "disabled": true
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/event/delete/1",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "event",
+    "delete",
+    "1"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Search",
+    "id": "e24dddbd-c185-4376-939f-0278746a9e04",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "search",
+    "value": "this is event",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/event/search",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "event",
+    "search"
+    ]
+    }
+    },
+    "response": []
+    }
+    ],
+    "id": "cc2ef146-79d2-48cf-80d3-163c3251fa4d"
+    },
+    {
+    "name": "Reminder",
+    "item": [
+    {
+    "name": "Get Categoreis",
+    "id": "c050347b-3af5-4ebd-a6c8-e28ef34dfabd",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 1|cQiFwndU7cXRtYPgdl99DD9KruSXjLT9nZsS5D8f",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/reminder/get_categories",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "reminder",
+    "get_categories"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Upcoming Reminders",
+    "id": "caa35e99-d6d7-42ac-b59a-4aa3ffd3de0f",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|drnuy3dQYGzynled8DFYc2FsTK7gdiNSYUYW2GI3",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/reminder/upcoming_reminders",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "reminder",
+    "upcoming_reminders"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Past Reminders",
+    "id": "3518b03a-26eb-4f11-b59b-d8f99b2a8012",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|drnuy3dQYGzynled8DFYc2FsTK7gdiNSYUYW2GI3",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/reminder/past_reminders",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "reminder",
+    "past_reminders"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Post Reminder",
+    "id": "62ce9cee-4ddf-4e93-92de-4ec6fdc02861",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 1|cQiFwndU7cXRtYPgdl99DD9KruSXjLT9nZsS5D8f",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "title",
+    "value": "alarm",
+    "type": "text"
+    },
+    {
+    "key": "alarm_date",
+    "value": "2023-2-25",
+    "type": "text"
+    },
+    {
+    "key": "alarm_time",
+    "value": "23:35",
+    "type": "text"
+    },
+    {
+    "key": "category_name",
+    "value": "cat",
+    "type": "text"
+    },
+    {
+    "key": "category_color",
+    "value": "black",
+    "type": "text"
+    },
+    {
+    "key": "phone",
+    "value": "01552439651",
+    "type": "text"
+    },
+    {
+    "key": "note",
+    "value": "second body reminder",
+    "type": "text"
+    },
+    {
+    "key": "pre_minder_time",
+    "value": "3",
+    "type": "text"
+    },
+    {
+    "key": "pre_minder_type",
+    "value": "1",
+    "description": " 1: minutes, 2: hours, 3: days",
+    "type": "text"
+    },
+    {
+    "key": "is_repeat",
+    "value": "1",
+    "description": " 1: repeat, 0: not repeat",
+    "type": "text"
+    },
+    {
+    "key": "repeat_type",
+    "value": "",
+    "type": "text"
+    },
+    {
+    "key": "repeat_days",
+    "value": "[1,3,4,6]",
+    "description": "1 => Monday, 2 => Tuesday, 3 => Wednesday, 4 => Thursday, 5 => Friday, 6 => Saturday, 7 => Sunday",
+    "type": "text"
+    },
+    {
+    "key": "chase_me_count",
+    "value": "2",
+    "type": "text"
+    },
+    {
+    "key": "duration_chase_me",
+    "value": "5",
+    "description": "count of minutes => 0",
+    "type": "text"
+    },
+    {
+    "key": "melody",
+    "type": "file",
+    "src": "/C:/Users/Elmenofy/Downloads/Music/file_example_MP3_700KB.mp3"
+    },
+    {
+    "key": "sound",
+    "value": "1",
+    "description": "0: off, 1: on",
+    "type": "text"
+    },
+    {
+    "key": "day_minder_count",
+    "value": "2",
+    "description": "count day minder => 3",
+    "type": "text"
+    },
+    {
+    "key": "duration_day_minder",
+    "value": "8",
+    "description": "minute => 6",
+    "type": "text"
+    },
+    {
+    "key": "is_pre_minder",
+    "value": "1",
+    "description": "0 => no, 1 => yes",
+    "type": "text"
+    },
+    {
+    "key": "pre_minder_time",
+    "value": "8",
+    "description": "count of minutes => 0",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/reminder/store",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "reminder",
+    "store"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Update Reminder",
+    "id": "16b15191-4b4a-4939-8e7e-00ac3ae50abb",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 1|bSoIpXOTv51p43mrZ0IZkQgyE8iejqFX831X4Gdx",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "title",
+    "value": "alarm",
+    "type": "text"
+    },
+    {
+    "key": "alarm_date",
+    "value": "2023-2-25",
+    "type": "text"
+    },
+    {
+    "key": "alarm_time",
+    "value": "20:50",
+    "type": "text"
+    },
+    {
+    "key": "category_name",
+    "value": "cat",
+    "type": "text"
+    },
+    {
+    "key": "category_color",
+    "value": "black",
+    "type": "text"
+    },
+    {
+    "key": "phone",
+    "value": "01552439651",
+    "type": "text"
+    },
+    {
+    "key": "note",
+    "value": "second body reminder",
+    "type": "text"
+    },
+    {
+    "key": "pre_minder_time",
+    "value": "1",
+    "type": "text"
+    },
+    {
+    "key": "is_repeat",
+    "value": "1",
+    "type": "text",
+    "description": " 1: repeat, 0: not repeat"
+    },
+    {
+    "key": "repeat_days",
+    "value": "[1,3,4,5]",
+    "type": "text"
+    },
+    {
+    "key": "chase_me_count",
+    "value": "2",
+    "type": "text",
+    "description": "count of minutes => 0"
+    },
+    {
+    "key": "duration_chase_me",
+    "value": "2",
+    "type": "text",
+    "description": "count of minutes => 2"
+    },
+    {
+    "key": "sound",
+    "value": "1",
+    "type": "text",
+    "description": "0: off, 1: on"
+    },
+    {
+    "key": "day_minder_count",
+    "value": "2",
+    "type": "text",
+    "description": "count day minder => 3"
+    },
+    {
+    "key": "duration_day_minder",
+    "value": "3",
+    "type": "text",
+    "description": "count of minutes => 2"
+    },
+    {
+    "key": "is_pre_minder",
+    "value": "1",
+    "type": "text",
+    "description": "0 => no, 1 => yes"
+    },
+    {
+    "key": "pre_minder_time",
+    "value": "5",
+    "type": "text",
+    "description": "count of minutes => 3"
+    },
+    {
+    "key": "melody",
+    "type": "file",
+    "src": "/C:/Users/Elmenofy/Downloads/Music/file_example_MP3_700KB.mp3"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/reminder/update/3",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "reminder",
+    "update",
+    "3"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Show Reminder",
+    "id": "f284a179-9ec4-42a2-bdc7-c8e94ecac263",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|drnuy3dQYGzynled8DFYc2FsTK7gdiNSYUYW2GI3",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "name",
+    "value": "this is event edit name",
+    "type": "text"
+    },
+    {
+    "key": "body",
+    "value": "this is event edit body",
+    "type": "text"
+    },
+    {
+    "key": "date",
+    "value": "2023/1/11",
+    "type": "text"
+    },
+    {
+    "key": "time",
+    "value": "23:49",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/reminder/show/2",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "reminder",
+    "show",
+    "2"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Delete",
+    "id": "ed4abdae-5c21-436f-8338-7dd9f20663dd",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|drnuy3dQYGzynled8DFYc2FsTK7gdiNSYUYW2GI3",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "",
+    "value": "",
+    "type": "text",
+    "disabled": true
+    },
+    {
+    "key": "",
+    "value": "",
+    "type": "text",
+    "disabled": true
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/reminder/delete/1",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "reminder",
+    "delete",
+    "1"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Search",
+    "id": "cb358179-1240-442f-8c9f-c26f9d7c5cb4",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "search",
+    "value": "01552439651",
+    "type": "text",
+    "description": "title,body,phone  -  ,cat name , color"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/reminder/search",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "reminder",
+    "search"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Reminders Trash",
+    "id": "163c0ff1-ae8f-4e08-96d9-5dabcc60ecc6",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/reminder/reminder_trash",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "reminder",
+    "reminder_trash"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Restore Reminder",
+    "id": "6b8cca67-9881-44d7-bd8d-7d0295600e95",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|drnuy3dQYGzynled8DFYc2FsTK7gdiNSYUYW2GI3",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "formdata",
+    "formdata": [
+    {
+    "key": "name",
+    "value": "this is event edit name",
+    "type": "text"
+    },
+    {
+    "key": "body",
+    "value": "this is event edit body",
+    "type": "text"
+    },
+    {
+    "key": "date",
+    "value": "2023/1/11",
+    "type": "text"
+    },
+    {
+    "key": "time",
+    "value": "23:49",
+    "type": "text"
+    }
+    ]
+    },
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/reminder/restore/4",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "reminder",
+    "restore",
+    "4"
+    ]
+    }
+    },
+    "response": []
+    },
+    {
+    "name": "Reminder Force Delete",
+    "id": "d8d10167-cba2-41fc-872d-0f5986d44ada",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "POST",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 3|drnuy3dQYGzynled8DFYc2FsTK7gdiNSYUYW2GI3",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/reminder/force_delete/4",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "reminder",
+    "force_delete",
+    "4"
+    ]
+    }
+    },
+    "response": []
+    }
+    ],
+    "id": "cb224871-ee29-4d6c-ba3a-5b04e03e9a28"
+    },
+    {
+    "name": "General",
+    "item": [
+    {
+    "name": "General data",
+    "id": "24f1e93a-afbc-4638-a07f-77358d779837",
+    "protocolProfileBehavior": {
+    "disableBodyPruning": true
+    },
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "Authorization",
+    "value": "Bearer 2|Z6VdG11aNZ2cHvVEBtkxTyHy92LDdg87bEs4bH2X",
+    "type": "text"
+    },
+    {
+    "key": "Accept",
+    "value": "application/json",
+    "type": "text"
+    },
+    {
+    "key": "Content-Type",
+    "value": "application/x-www-form-urlencoded",
+    "type": "text"
+    }
+    ],
+    "url": {
+    "raw": "http://127.0.0.1:8000/api/general/",
+    "protocol": "http",
+    "host": [
+    "127",
+    "0",
+    "0",
+    "1"
+    ],
+    "port": "8000",
+    "path": [
+    "api",
+    "general",
+    ""
+    ]
+    }
+    },
+    "response": []
+    }
+    ],
+    "id": "91b2e28f-7db8-4da3-877a-dd9d2092ffa2"
+    }
+    ]
+    }
+    }
