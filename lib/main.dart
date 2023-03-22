@@ -17,15 +17,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       debugShowMaterialGrid: false,
-      initialRoute: "/",
-      routes: <String, WidgetBuilder>{
-        '/': (context) => const IntroPage(),
-        '/SigninPageAndGetStart': (context) => const SigninPageAndGetStart(),
-        '/RemindersPage': (context) => const RemindersPage(),
-      },
+      initialRoute: "/", onGenerateRoute: MyAppRoute.generateRoute,
+      // routes: <String, WidgetBuilder>{
+      //   '/': (context) => const IntroPage(),
+      //   '/SigninPageAndGetStart': (context) => const SigninPageAndGetStart(),
+      //   '/RemindersPage': (context) => const RemindersPage(),
+      // },
     );
   }
 }

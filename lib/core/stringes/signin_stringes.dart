@@ -7,6 +7,7 @@ class SigninStringes {
   static const String oCW = "or connect with";
   static const String facebook = "Facebook";
   static const String google = "Google";
+  static const String phone = "Phone Number";
 }
 
 class GetStart {

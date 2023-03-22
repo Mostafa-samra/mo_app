@@ -7,29 +7,27 @@ class SigninPageAndGetStart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          bottom: const TabBar(
-            tabs: [
-              Tab(
-                text: "Sign In",
-              ),
-              Tab(
-                text: "Get Started",
-              ),
+    return DefaultTabController(
+        length: 2,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: const TabBar(
+              tabs: [
+                Tab(
+                  text: "Sign In",
+                ),
+                Tab(
+                  text: "Get Started",
+                ),
+              ],
+            ),
+          ),
+          body: const TabBarView(
+            children: [
+              SignInTab(),
+              GetStartTab(),
             ],
           ),
-        ),
-        body: const TabBarView(
-          children: [
-            SignInTab(),
-            GetStartTab(),
-          ],
-        ),
-      ),
-    ));
+        ));
   }
 }

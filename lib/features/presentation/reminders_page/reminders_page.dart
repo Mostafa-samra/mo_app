@@ -6,7 +6,11 @@ class RemindersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      body: Scaffold(
+        appBar: AppBar(
+          title: Text("gfgd"),
+        ),
+      ),
     );
   }
 }
