@@ -10,6 +10,7 @@ class SigninTextFeld extends StatelessWidget {
   final void Function()? onPressedPrefixIcon;
   final TextInputType? keyboardType;
   final TextEditingController? controller;
+  final bool obscureText;
   const SigninTextFeld({
     Key? key,
     required this.formText,
@@ -18,6 +19,7 @@ class SigninTextFeld extends StatelessWidget {
     this.onPressedPrefixIcon,
     this.keyboardType,
     this.controller,
+    required this.obscureText,
   }) : super(key: key);
 
   @override
@@ -38,6 +40,7 @@ class SigninTextFeld extends StatelessWidget {
               onPressed: () {},
             ),
           ),
+          obscureText: obscureText,
           keyboardType: keyboardType,
           textInputAction: TextInputAction.done,
         ),

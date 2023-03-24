@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+
 import 'package:mo_app/core/color/signin_colors.dart';
 
 class GetStartTextFormFeld extends StatelessWidget {
@@ -8,6 +9,7 @@ class GetStartTextFormFeld extends StatelessWidget {
   final IconData? suffixIcon;
   final void Function()? onPressedPrefixIcon;
   final TextInputType? keyboardType;
+  final TextEditingController? controller;
   const GetStartTextFormFeld({
     Key? key,
     required this.formText,
@@ -15,6 +17,7 @@ class GetStartTextFormFeld extends StatelessWidget {
     this.suffixIcon,
     this.onPressedPrefixIcon,
     this.keyboardType,
+    this.controller,
   }) : super(key: key);
 
   @override
@@ -24,6 +27,7 @@ class GetStartTextFormFeld extends StatelessWidget {
       child: Material(
         shadowColor: SigninColors.signinWhite,
         child: TextFormField(
+          controller: controller,
           decoration: InputDecoration(
             border: const OutlineInputBorder(),
             hintText: formText,

@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:mo_app/core/color/signin_colors.dart';
 import 'package:mo_app/core/stringes/signin_stringes.dart';
@@ -9,7 +7,7 @@ import 'package:mo_app/features/presentation/signin_getstart/signin/widgets/sign
 import 'package:mo_app/features/presentation/signin_getstart/signin/widgets/signin_for_text.dart';
 import 'package:mo_app/features/presentation/signin_getstart/signin/widgets/signin_text.dart';
 import 'package:mo_app/features/presentation/signin_getstart/signin/widgets/signin_textffeld.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 
 class SignInTab extends StatefulWidget {
   const SignInTab({super.key});
@@ -19,24 +17,8 @@ class SignInTab extends StatefulWidget {
 }
 
 class _SignInTabState extends State<SignInTab> {
-  TextEditingController phoneController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  void login(String phone, password) async {
-    try {
-      Response response = await post(
-          Uri.parse("https://omalmisrapp.com/reminder/public/api/login"),
-          body: {'phone': phone, 'password': password});
-      if (response.statusCode == 200) {
-        var data = jsonDecode(response.body.toString());
-        print(data['token']);
-        print('Account login');
-      } else {
-        print('failed');
-      }
-    } catch (e) {
-      print(e.toString());
-    }
-  }
+  var phoneController = TextEditingController();
+  var passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -46,12 +28,14 @@ class _SignInTabState extends State<SignInTab> {
         children: [
           const SigninText(),
           SigninTextFeld(
+              obscureText: false,
               controller: phoneController,
               formText: SigninStringes.phone,
-              iconButton: Icons.email,
+              iconButton: Icons.phone,
               onPressedPrefixIcon: () {},
               keyboardType: TextInputType.phone),
           SigninTextFeld(
+            obscureText: true,
             controller: passwordController,
             formText: SigninStringes.password,
             iconButton: Icons.lock,
@@ -66,11 +50,10 @@ class _SignInTabState extends State<SignInTab> {
               buttonText: SigninStringes.login,
               textColor: SigninColors.signinWhite,
               onPressed: () {
-                login(phoneController.text.toString(),
-                    passwordController.text.toString());
+                login();
                 // Navigator.push(context,
                 //     MaterialPageRoute(builder: (_) => const RemindersPage()));
-                Navigator.pushNamed(context, "/RemindersPage");
+                //Navigator.pushNamed(context, "/RemindersPage");
               },
             ),
           ),
@@ -94,5 +77,25 @@ class _SignInTabState extends State<SignInTab> {
         ],
       ),
     );
+  }
+
+  Future<void> login() async {
+    if (passwordController.text.isNotEmpty && phoneController.text.isNotEmpty) {
+      var response = await http.post(
+          Uri.parse("https://omalmisrapp.com/reminder/public/api/login"),
+          body: {
+            'phone': phoneController.text,
+            'password': passwordController.text
+          });
+      if (response.statusCode == 200) {
+        Navigator.pushNamed(context, "/RemindersPage");
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text("invelid credentials.")));
+      }
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text("Phone number or Password is not allawed")));
+    }
   }
 }
