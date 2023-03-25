@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mo_app/features/presentation/intro/pages/intro_page.dart';
-import 'package:mo_app/features/presentation/reminders_page/reminders_page.dart';
+import 'package:mo_app/features/presentation/reminders_page/pages/reminders_page.dart';
 import 'package:mo_app/features/presentation/signin_getstart/signin_page.dart';
 
 class MyAppRoute {
