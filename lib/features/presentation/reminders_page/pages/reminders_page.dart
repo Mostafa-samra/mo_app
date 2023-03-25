@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:mo_app/features/presentation/reminders_page/pages/current_tab.dart';
+import 'package:mo_app/features/presentation/reminders_page/pages/finished_tab.dart';
 import 'package:mo_app/features/presentation/reminders_page/widgets/reminders_textformfild_widgets.dart';
 
 class RemindersPage extends StatelessWidget {
@@ -36,6 +38,7 @@ class RemindersPage extends StatelessWidget {
                 children: [
                   RemindersTextformfild(
                     formText: "",
+                    hintText: "hello",
                     iconButton: Icons.search,
                   ),
                   SizedBox(
@@ -45,7 +48,7 @@ class RemindersPage extends StatelessWidget {
                       onPressed: () {},
                       icon: Icon(
                         Icons.filter_alt,
-                        color: Colors.blue,
+                        color: const Color.fromARGB(255, 20, 1, 194),
                         size: 60,
                       ),
                     ),
@@ -53,7 +56,7 @@ class RemindersPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height / 2,
+                height: MediaQuery.of(context).size.height / 1.3,
                 child: DefaultTabController(
                   length: 2,
                   child: Scaffold(
@@ -72,7 +75,10 @@ class RemindersPage extends StatelessWidget {
                       ),
                     ),
                     body: const TabBarView(
-                      children: [],
+                      children: [
+                        CurrentTab(),
+                        FinishedTab(),
+                      ],
                     ),
                   ),
                 ),
