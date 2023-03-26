@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mo_app/features/presentation/routes.dart';
-
-import 'features/presentation/reminders_page/pages/reminders_page.dart';
+import 'package:mo_app/features/presentation/new_task/page/new_task.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: RemindersPage(),
+      home: NewTask(),
       debugShowCheckedModeBanner: false,
       debugShowMaterialGrid: false,
       // initialRoute: "/", onGenerateRoute: MyAppRoute.generateRoute,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:mo_app/features/presentation/reminders_page/pages/current_tab.dart';
 import 'package:mo_app/features/presentation/reminders_page/pages/finished_tab.dart';
+import 'package:mo_app/features/presentation/reminders_page/widgets/appbar_widgets.dart';
 import 'package:mo_app/features/presentation/reminders_page/widgets/reminders_textformfild_widgets.dart';
 
 class RemindersPage extends StatelessWidget {
@@ -10,25 +10,7 @@ class RemindersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.more_vert_outlined,
-              size: 20,
-            ),
-          ),
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  CupertinoIcons.add_circled,
-                  size: 20,
-                ))
-          ],
-          title: const Text("Reminders"),
-        ),
+        appBar: appBarWidgetsReminders(),
         body: SizedBox(
           child: Column(
             children: [
@@ -36,7 +18,7 @@ class RemindersPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  RemindersTextformfild(
+                  const RemindersTextformfild(
                     formText: "",
                     hintText: "hello",
                     iconButton: Icons.search,
@@ -46,9 +28,9 @@ class RemindersPage extends StatelessWidget {
                     width: 100,
                     child: IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.filter_alt,
-                        color: const Color.fromARGB(255, 20, 1, 194),
+                        color: Color.fromARGB(255, 20, 1, 194),
                         size: 60,
                       ),
                     ),
