@@ -1,13 +1,21 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-class DetalesSlide extends StatefulWidget {
-  const DetalesSlide({super.key});
+// late final String text1;
+// late final String text2;
+// late final String text3;
 
-  @override
-  State<DetalesSlide> createState() => _DetalesSlideState();
-}
+class DetalesSlide extends StatelessWidget {
+  final String text1;
+  final String text2;
+  final String text3;
+  const DetalesSlide({
+    super.key,
+    required this.text1,
+    required this.text2,
+    required this.text3,
+  });
 
-class _DetalesSlideState extends State<DetalesSlide> {
   // bool? isChecked = false;
   @override
   Widget build(BuildContext context) {
@@ -17,7 +25,7 @@ class _DetalesSlideState extends State<DetalesSlide> {
         color: Colors.yellow,
       ),
 //padding: EdgeInsets.all(10),
-      margin: EdgeInsets.only(top: 10),
+      margin: const EdgeInsets.only(top: 10),
       width: 400,
       height: 100,
       child: Center(
@@ -25,8 +33,8 @@ class _DetalesSlideState extends State<DetalesSlide> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
+            const Padding(
+              padding: EdgeInsets.only(left: 15),
               child: SizedBox(
                   height: 200,
                   width: 10,
@@ -39,9 +47,9 @@ class _DetalesSlideState extends State<DetalesSlide> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Assignment Submission"),
-                  Text("once"),
-                  Text("22-AUG-2022   12 AM"),
+                  Text(text1),
+                  Text(text2),
+                  Text(text3),
                 ],
               ),
             ),
@@ -50,8 +58,8 @@ class _DetalesSlideState extends State<DetalesSlide> {
                 height: 100,
                 width: 100,
                 child: Checkbox(
-                    tristate: true,
-                    value: true,
+                    tristate: false,
+                    value: false,
                     onChanged: (newBool) {
                       // setState(() {
                       //   isChecked = newBool;
