@@ -6,10 +6,20 @@ class CategoryContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
-      child: Column(
-        children: [TextFormField()],
-      ),
-    );
+        width: MediaQuery.of(context).size.width,
+        color: Colors.blue,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 50, right: 5),
+          child: DropdownButton<String>(
+            items: <String>['Default', 'B', 'C', 'D'].map((String value) {
+              return DropdownMenuItem<String>(
+                alignment: Alignment.center,
+                value: value,
+                child: Text(value),
+              );
+            }).toList(),
+            onChanged: (_) {},
+          ),
+        ));
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mo_app/features/presentation/new_task/page/new_task.dart';
+import 'package:mo_app/features/presentation/new_task/page/new_task_import.dart';
 
 void main() {
   runApp(const MyApp());
