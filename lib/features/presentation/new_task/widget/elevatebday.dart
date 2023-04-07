@@ -14,11 +14,11 @@ class ElevateBday extends StatelessWidget {
       padding: const EdgeInsets.all(3),
       child: ElevatedButton(
           onPressed: () {},
+          style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
           child: Text(
             text,
-            style: TextStyle(color: Colors.blue),
-          ),
-          style: ElevatedButton.styleFrom(backgroundColor: Colors.white)),
+            style: const TextStyle(color: Colors.blue),
+          )),
     );
   }
 }
